@@ -3,11 +3,36 @@
   emailjs.init("pG9Fd_eD7Mva8Qo8e"); // 🔁 Inserisci qui il tuo USER ID di EmailJS
 })();
 
-const menuToggle = document.getElementById('menu-toggle');
-const navUl = document.querySelector('.navbar ul');
+document.addEventListener('DOMContentLoaded', () => {
+  const menuToggle = document.getElementById('menu-toggle');
+  const navUl = document.querySelector('.navbar ul');
+  const navLinks = navUl.querySelectorAll('a');
+  const activeSectionSpan = document.getElementById('active-section');
 
-menuToggle.addEventListener('click', () => {
-  navUl.classList.toggle('show');
+  // Funzione toggle menu al click sul bottone
+  menuToggle.addEventListener('click', () => {
+    navUl.classList.toggle('show');
+  });
+
+  // Quando clicchi su una voce del menu
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      // Cambia voce attiva e testo nel bottone
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+
+      // Aggiorna testo bottone con la voce selezionata (testo + freccia)
+      activeSectionSpan.textContent = link.textContent;
+
+      // Nascondi menu
+      navUl.classList.remove('show');
+
+      // Optional: scrolla verso la sezione cliccata
+      // e.preventDefault();
+      // const target = document.querySelector(link.getAttribute('href'));
+      // target.scrollIntoView({behavior: 'smooth'});
+    });
+  });
 });
 
 // Countdown al matrimonio

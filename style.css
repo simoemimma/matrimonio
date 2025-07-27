@@ -83,21 +83,30 @@ html, body {
 /* Media query per mobile */
 @media (max-width: 768px) {
   #menu-toggle {
-    display: block; /* mostra bottone hamburger */
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    font-family: 'Dancing Script', cursive;
+    color: #2c3e50;
+    cursor: pointer;
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
   }
 
   .navbar ul {
-    display: none; /* nascondi menu di default */
+    display: none;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.8); /* Cambiato da blu a trasparente chiaro */
+    backdrop-filter: saturate(180%) blur(10px); /* opzionale per sfocatura */
     position: absolute;
-    top: 60px; /* sotto la navbar */
+    top: 50px;
     left: 0;
     right: 0;
+    padding: 0;
     margin: 0;
-    padding: 10px 0;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    z-index: 9999;
+    z-index: 1000;
   }
 
   .navbar ul.show {
@@ -105,8 +114,26 @@ html, body {
   }
 
   .navbar ul li {
+    display: block;
+  }
+
+  .navbar ul li a {
+    color: #2c3e50;
+    font-weight: normal;
+    padding: 10px 15px;
+    display: block;
     text-align: center;
-    padding: 10px 0;
+  }
+
+  .navbar ul li a.active {
+    font-weight: bold;
+  }
+
+  /* Rimuoviamo la freccia dal menu vero e proprio */
+  #active-section::after {
+    content: " ▼";
+    font-size: 0.8rem;
+    margin-left: 5px;
   }
 }
 
