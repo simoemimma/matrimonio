@@ -75,6 +75,45 @@ html, body {
   padding: 10px 15px;
 }
 
+/* Menu orizzontale desktop */
+.navbar ul {
+  display: flex;
+  position: sticky;
+  justify-content: center;
+  gap: 30px;
+  padding: 10px 0
+}
+
+/* Media query per mobile */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block; /* mostra bottone hamburger */
+  }
+
+  .navbar ul {
+    display: none; /* nascondi menu di default */
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    position: absolute;
+    top: 60px; /* sotto la navbar */
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    z-index: 9999;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .navbar ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+
 
 /* Sezione Home */
 

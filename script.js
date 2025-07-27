@@ -3,6 +3,13 @@
   emailjs.init("pG9Fd_eD7Mva8Qo8e"); // 🔁 Inserisci qui il tuo USER ID di EmailJS
 })();
 
+const menuToggle = document.getElementById('menu-toggle');
+const navUl = document.querySelector('.navbar ul');
+
+menuToggle.addEventListener('click', () => {
+  navUl.classList.toggle('show');
+});
+
 // Countdown al matrimonio
 const countdown = document.getElementById("countdown");
 const targetDate = new Date("2025-10-18T15:30:00").getTime();
