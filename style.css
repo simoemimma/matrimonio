@@ -29,6 +29,21 @@ html, body {
 }
 
 /* Navbar */
+
+
+/* Nascondi bottone su desktop */
+#menu-toggle {
+  display: none;
+  font-size: 2.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #2c3e50;
+  padding: 10px 15px;
+}
+
+/* Menu orizzontale desktop */
+
 .navbar {
   position: sticky;
   top: 0;
@@ -64,25 +79,6 @@ html, body {
   background-color: rgba(58, 118, 179, 0.1);
 }
 
-/* Nascondi bottone su desktop */
-#menu-toggle {
-  display: none;
-  font-size: 2.5rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #2c3e50;
-  padding: 10px 15px;
-}
-
-/* Menu orizzontale desktop */
-.navbar ul {
-  display: flex;
-  position: sticky;
-  justify-content: center;
-  gap: 30px;
-  padding: 10px 0
-}
 
 /* Media query per mobile */
 @media (max-width: 768px) {
