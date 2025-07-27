@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <link rel="icon" href="favicon.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mimma & Simone si sposano!</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <ul>
+      <li><a href="#hero">Noi</a></li>
+      <li><a href="#cerimonia">Cerimonia</a></li>
+      <li><a href="#ricevimento">Ricevimento</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="#lista-nozze">Lista Nozze</a></li>
+    </ul>
+  </nav>
+
+ <section id="hero" class="section pastel-hero">
+  <div class="container text-center">
+    <h2 >Mimma e Simo si sposano!</h2>
+    <img src="noi.jpg" alt="Noi due" class="img-vostra">
+    <h2 >Con immensa gioia annunciamo il nostro matrimonio e il battesimo del nostro piccolo Valerio.</h12>
+    <p>Ci piacerebbe condividere questi momenti speciali con voi! </p>
+
+    <div id="countdown"></div>
+  </div>
+</section>
+
+  <section id="cerimonia">
+    <h2>La Cerimonia</h2>
+    <p>La cerimonia del matrimonio e a seguire quella del battesimo si terranno:</p>
+    <div class="info">
+      <div class="quando">
+        <img src="calendario-cuore.png" alt="Calendario con cuore" class="img-calendario">
+        <p>18 Ottobre 2025, ore 15:30</p>
+      </div>
+      <div class="dove">
+        <p>presso Chiesa di San Pancrazio, Via dell’Isola Farnese, 252, Roma</p>
+        <a href="https://www.google.com/maps?q=Chiesa+di+San+Pancrazio,+Via+dell’Isola+Farnese,+252,+Roma" target="_blank">Come arrivare</a>
+        <p>Parcheggio adiacente alla chiesa (indicato con una grossa "P")</p>
+    
+        
+      <!-- Foto a sinistra -->
+        <div class="foto-testo">
+            <img src="interno-chiesa.jpg" alt="Interno della chiesa">
+            <div class="descrizione">
+            <p class="descrizione-immagine">La Chiesa di San Pancrazio, nel cuore dell’antico borgo di Isola Farnese, risale al XV secolo ed è stata consacrata nel 1559. Costruita dalla famiglia Orsini, fu elevata a parrocchia nel 1590.
+                L’edificio, costruito su una preesistenza più antica, si sviluppa su tre navate e presenta numerosi affreschi databili tra il XV e il XVII secolo, tra cui una delicata Madonna che allatta e dipinti di artisti come il Cavalier d’Arpino e il Pomarancio.
+                Il portale, realizzato con marmi romani di recupero, è sormontato da un rosone in vetro colorato. Degno di nota anche il fonte battesimale con lo stemma dei Farnese e un crocifisso ligneo del XV secolo. Nel 2013 è stato installato un suggestivo portone in bronzo con scene della vita di San Pancrazio, opera di Pino Schiti e Sara Chirico.
+            </p>
+            </div>
+        </div>
+ 
+      <!-- Foto a destra -->
+        <div class="foto-testo foto-destra">
+            <img src="borgo-isola-farnese.jpg" alt="Borgo di Isola Farnese">
+            <div class="descrizione">
+            <p class="descrizione-immagine">Il borgo di Isola Farnese sorge su una rupe di tufo, circondato da mura e torrioni di un castello medievale. Situato a due chilometri da La Storta, è una piccola realtà separata dal resto di Roma, immersa nel Parco di Veio e caratterizzata da un’atmosfera fiabesca e medievale. Nel borgo si trovano tracce dell’epoca romana, come una colonna nella piazza principale e un frammento di sarcofago. Il Castello Farnese, con il suo cortile, pozzo e torrioni, rappresenta il cuore storico del borgo, con proprietà passate da monasteri, Orsini e Farnese fino ai moderni proprietari.</p>
+            </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <section id="ricevimento">
+    <h2>Il Ricevimento</h2>
+    <div class="info">
+      <div class="quando">
+        <img class="clessidra" src="orologio-18.png" alt="Orologio ore 18">
+        <p>Il ricevimento avrà inizio dalle ore 18.00</p>
+      </div>
+      <div class="dove">
+        <p>presso Villa Galanti, Via del Casale di San Nicola 241, Roma</p>
+        <p>TRANQUILLI!! è a soli 11 minuti di macchina</p>
+        <a href="https://www.google.com/maps?q=Villa+Galanti,+Via+del+Casale+di+San+Nicola+241,+Roma" target="_blank">Come arrivare</a>
+  
+        <div class="immagini-villa">
+            <img src="villa-galanti.jpg" alt="Villa Galanti">
+            <img src="villa-galanti-vista-alto.jpg" alt="Villa Galanti alto">
+        </div>
+    </div>
+    </div>
+  </section>
+
+  <section id="rsvp">
+  <h2>RSVP</h2>
+  <p>È gradita la gentile conferma entro il <strong>15 settembre 2025</strong>.</p>
+  <form id="rsvp-form">
+    <input type="text" name="nome" placeholder="Nome e Cognome" required />
+    <input type="number" name="persone" placeholder="Numero di partecipanti adulti" required min="1" />
+    <input type="number" name="bambini2" placeholder="Numero di bambini 0-2 anni" required min="0" />
+    <input type="number" name="bambini3" placeholder="Numero di bambini maggiori di 3 anni" required min="0" />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="allergie" placeholder="Allergie o intolleranze?"></textarea>
+    <button type="submit">Conferma</button>
+  </form>
+  <p id="form-status"></p>
+</section>
+
+
+  <section id="lista-nozze">
+    <h2>Lista Nozze</h2>
+    <p>La vostra presenza è per noi il dono più bello.</p>
+    <p>Se desiderate farci un regalo, il vostro dono ci aiuterà a vivere il nostro viaggio di nozze come un sogno da ricordare per sempre.</p>
+    <p>Per il piccolo Valerio, ogni dono sarà il primo passo verso il suo futuro: sarà conservato in un buono postale, a cui accederà al compimento dei 18 anni.</p>
+    <br><br>
+    <p>Per chi lo desidera è possibile utilizzare il seguente IBAN:</p>
+
+    <p> IT00A0000000000000000000000<br>
+    Intestato a: Simone Bravetti e Luvarà Domenica<br>
+    Inserire uno dei due nomi come destinatario</p>
+  </section>
+</body>
+</html>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>

@@ -1,0 +1,345 @@
+/* Importa Dancing Script */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+/* Colori principali */
+:root {
+  --blu: #5b8ab3;
+  --blu-pastello: #dceaf6;
+  --bianco: #ffffff;
+  --grigio-chiaro: #f9f9f9;
+  --ombra: rgba(0, 0, 0, 0.1);
+}
+
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Dancing Script', cursive;
+  background-color: var(--grigio-chiaro);
+  color: #2c3e50;
+  line-height: 1.2;
+  overflow-x: hidden;
+  font-size: 18px;
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navbar ul li a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: color 0.3s ease, transform 0.3s ease;
+  padding: 6px 10px;
+  border-radius: 12px;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+  color: #3a76b3;
+  transform: scale(1.1);
+  background-color: rgba(58, 118, 179, 0.1);
+}
+
+/* Sezione Home */
+
+
+#hero {
+  position: relative;
+  background-image: url('villa-galanti-vista-alto.jpg');
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: #2c3e50;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow: hidden; /* importante per contenere ::before */
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background-color: rgba(255, 255, 255, 0.4); /* nero con trasparenza 40% */
+  z-index: 0;
+}
+
+#hero > * {
+  position: relative; /* per portare il contenuto sopra l’overlay */
+  z-index: 1;
+}
+
+.title, .subtitle {
+  font-family: 'Dancing Script', cursive;
+}
+
+/* Colore pastello per l'hero */
+.pastel-hero {
+  background-color: #fde6ec; /* rosa cipria */
+  padding: 100px 20px;
+  width: 100vw;
+  margin: 0;
+}
+
+.img-vostra {
+  width: 450px;
+  border-radius: 10%;
+  margin-top: 30px;
+  border: 4px solid white;
+}
+
+.img-calendario {
+  width: 260px;
+  border-radius: 40%;
+  margin-top: 30px;
+  border: 4px solid white;
+}
+
+.clessidra {
+  width: 260px;
+  margin-top: 30px;
+}
+
+.section-home h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.frase-annuncio {
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.foto-noi {
+  width: 250px;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#countdown {
+  font-size: 2rem; /* aumentato rispetto a 2rem */
+  border: 2px solid #2c3e50;
+  border-radius: 100px;
+  padding: 15px 30px; /* opzionale: più spazio intorno */
+  background-color: #fff;
+  color: #2c3e50;
+  display: inline-block;
+  margin-top: 50px; /* 👈 Spazio sopra il countdown */
+}
+
+/* Sezioni full width e sfondi pastello */
+section {
+  padding: 80px 20px;
+  width: 100%;
+  text-align: center;
+}
+
+#cerimonia {
+  background-color: #ffffff;
+}
+
+#ricevimento {
+  background-color: #eaf6f0;
+}
+
+#rsvp {
+  background-color: #fff6d1;
+}
+
+#lista-nozze {
+  background-color: #e6f0fa;
+}
+
+/* Titoli */
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+section p {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+section a {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+/* Immagini */
+section img {
+  max-width: 100%;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 10px var(--ombra);
+}
+
+.pastel-ricevimento {
+  background-color: #e6f0f2; /* azzurro molto chiaro */
+  padding: 100px 20px;
+  width: 100vw;
+  margin: 0;
+}
+
+.img-ricevimento {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.dove {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.immagini-villa {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.immagini-villa img {
+  max-width: 1000px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form input,
+form textarea,
+form select,
+form button {
+  padding: 12px;
+  border-radius: 15px;
+  border: 1px solid #ccc;
+  font-size: 22px !important;
+  font-family: 'Dancing Script', cursive !important;
+}
+
+form button {
+  background-color: var(--blu);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 22px;
+}
+
+form button:hover {
+  background-color: #457aa0;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  font-size: 22px;
+  color: #555; /* più scuro per visibilità, ma sempre elegante */
+}
+
+
+
+#form-status {
+  margin-top: 10px;
+  font-style: italic;
+  color: green;
+}
+
+.foto-testo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 40px 0;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row; /* default: immagine a sinistra */
+}
+
+.foto-testo.foto-destra {
+  flex-direction: row-reverse;
+}
+
+.foto-testo img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.foto-testo .descrizione {
+  max-width: 400px;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .foto-testo {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .foto-testo .descrizione {
+    max-width: 100%;
+  }
+}
+
+.descrizione-immagine {
+  font-family: 'Dancing Script', cursive;
+  font-style: italic;
+  font-size: 1rem;
+  color: #555555; /* un grigio più soft */
+  max-width: 400px;
+  margin: 10px auto 30px auto;
+  line-height: 1.4;
+  text-align: center;
+  background-color: #f7f7f7; /* leggero sfondo pastello */
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(73, 70, 70, 0.08);
+}
