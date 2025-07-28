@@ -406,7 +406,7 @@ form textarea::placeholder {
 .descrizione-immagine {
   font-family: 'Dancing Script', cursive;
   font-style: italic;
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #555555; /* un grigio più soft */
   max-width: 400px;
   margin: 10px auto 30px auto;
